@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+        }
+        div img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="show"></h1>
+   
+    <div>
+        <button class="btn"> <img src="" alt="Dice" class="dicepic"></button>
+    </div>
+    <script>
+        btn = document.querySelector(".btn");
+        btn.onclick=()=>{
+            dicepic = document.querySelector(".dicepic");
+            show = document.querySelector(".show");
+            num = Math.floor(Math.random() *(7 - 1) + 1);
+            show.innerHTML = num;
+
+            if(num == 1){
+                dicepic.src = "dice1.jpg";
+            }
+            if(num == 2){
+                dicepic.src = "dice2.png";
+            }
+            if(num == 3){
+                dicepic.src = "dice3.png";
+            }
+            if(num==4){
+                dicepic.src = "dice4.jpg";
+            }
+            if(num==5){
+                dicepic.src = "dice5.png";
+            }
+            if(num==6){
+                dicepic.src = "dice6.png";
+            }
+
+
+        }
+    </script>
+</body>
+</html>
